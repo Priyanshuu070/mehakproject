@@ -1,0 +1,14 @@
+{
+  "name": "vayro-site",
+  "version": "1.0.0",
+  "description": "VAYRO - Sneaker brand modern website",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "serve": "node server.js"
+  },
+  "keywords": ["vayro", "sneakers", "ecommerce", "brand"],
+  "author": "",
+  "license": "ISC"
+}
