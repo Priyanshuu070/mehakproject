@@ -4,13 +4,10 @@ const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 
-// Resolve distribution directory (works whether run from MehakProject or vayro-site)
-let distDir = path.resolve(__dirname, 'vayro-site', 'dist');
-if (!fs.existsSync(distDir)) {
-  distDir = path.resolve(__dirname, 'dist');
-}
-if (!fs.existsSync(distDir)) {
-  distDir = path.resolve(__dirname);
+// Resolve distribution directory
+let distDir = __dirname;
+if (!fs.existsSync(path.join(distDir, 'index.html')) && fs.existsSync(path.join(__dirname, 'vayro-site', 'dist', 'index.html'))) {
+  distDir = path.join(__dirname, 'vayro-site', 'dist');
 }
 
 const MIME_TYPES = {
